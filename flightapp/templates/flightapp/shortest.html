@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shortest Airport Between Two</title>
+</head>
+<body>
+
+<h2>Shortest Duration Between Two Airports</h2>
+
+<form method="post">
+    {% csrf_token %}
+
+    <label>Airport 1:</label>
+    <select name="a1">
+        {% for a in airports %}
+            <option value="{{ a.id }}">{{ a.airport_code }}</option>
+        {% endfor %}
+    </select>
+
+    <br><br>
+
+    <label>Airport 2:</label>
+    <select name="a2">
+        {% for a in airports %}
+            <option value="{{ a.id }}">{{ a.airport_code }}</option>
+        {% endfor %}
+    </select>
+
+    <br><br>
+
+    <button type="submit">Find</button>
+</form>
+
+<hr>
+
+{% if result %}
+    <p><strong>Airport:</strong> {{ result.airport_code }}</p>
+    <p><strong>Duration:</strong> {{ result.duration }}</p>
+{% endif %}
+
+</body>
+</html>

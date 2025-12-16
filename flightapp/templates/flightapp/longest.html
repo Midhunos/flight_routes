@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Longest Duration Airport</title>
+</head>
+<body>
+
+<h2>Longest Duration Airport</h2>
+
+{% if node %}
+    <p><strong>Airport:</strong> {{ node.airport_code }}</p>
+    <p><strong>Duration:</strong> {{ node.duration }}</p>
+{% else %}
+    <p>No airports found.</p>
+{% endif %}
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Nth Left / Right Node</title>
+</head>
+<body>
+
+<h2>Find Nth Left or Right Airport</h2>
+
+<form method="post">
+    {% csrf_token %}
+
+    <label>Root Airport:</label>
+    <select name="root" required>
+        {% for r in roots %}
+            <option value="{{ r.id }}">{{ r.airport_code }}</option>
+        {% endfor %}
+    </select>
+    <br><br>
+
+    <label>Direction:</label>
+    <select name="direction" required>
+        <option value="L">Left</option>
+        <option value="R">Right</option>
+    </select>
+    <br><br>
+
+    <label>N (steps):</label>
+    <input type="number" name="n" min="0" required>
+    <br><br>
+
+    <button type="submit">Search</button>
+</form>
+
+<hr>
+
+{% if result %}
+    <h3>Result Airport: {{ result.airport_code }}</h3>
+    <p>Duration: {{ result.duration }}</p>
+{% elif result == None %}
+    <h3>No such node found</h3>
+{% endif %}
+
+</body>
+</html>

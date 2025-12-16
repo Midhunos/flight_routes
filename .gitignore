@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+env/
+.venv/
+
+# Django stuff
+*.log
+db.sqlite3
+media/
+
+# Migrations cache
+**/migrations/__pycache__/
+
+# Environment variables
+.env
+.env.*
+
+# IDE / Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Static files (optional, if collected)
+staticfiles/
+
+# Test / coverage
+htmlcov/
+.coverage
+.pytest_cache/
+
+# Node (if ever added frontend)
+node_modules/
