@@ -49,6 +49,9 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+CSRF_TRUSTED_ORIGINS = [
+    "https://n8ck0s8kwgscc8w00owso4gc.shijin.in",
+]
 
 ROOT_URLCONF = 'flight_routes.urls'
 
